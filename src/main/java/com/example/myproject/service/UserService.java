@@ -6,11 +6,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class UserService {
 
-    private AtomicLong counter;
-
-    public UserService() {
-        this.counter = new AtomicLong();
-    }
+    private static final AtomicLong counter = new AtomicLong();
 
     public User getUser() {
         return new User(counter.incrementAndGet(), "compass");

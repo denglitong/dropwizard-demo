@@ -25,9 +25,6 @@ maven_install(
         "com.codahale.metrics:metrics-annotation:3.0.2",
         "com.codahale.metrics:metrics-healthchecks:3.0.2",
 
-        "com.fasterxml.jackson.core:jackson-core:2.13.0",
-        "com.fasterxml.jackson.core:jackson-annotations:2.13.0",
-        "com.fasterxml.jackson.core:jackson-databind:2.13.0",
         "com.google.code.gson:gson:2.8.9",
 
         "org.hibernate.validator:hibernate-validator:6.2.0.Final",

@@ -1,8 +1,8 @@
 package com.example.myproject;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotEmpty;
 
 /**
  * map to config yml file from argument specified from command
@@ -19,22 +19,18 @@ public class ApplicationConfiguration extends Configuration {
     @NotEmpty
     private String defaultName = "Stranger";
 
-    @JsonProperty
     public String getTemplate() {
         return template;
     }
 
-    @JsonProperty
     public void setTemplate(String template) {
         this.template = template;
     }
 
-    @JsonProperty
     public String getDefaultName() {
         return defaultName;
     }
 
-    @JsonProperty
     public void setDefaultName(String defaultName) {
         this.defaultName = defaultName;
     }

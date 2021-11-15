@@ -25,9 +25,6 @@ java_library(
         "@maven//:com_codahale_metrics_metrics_annotation",
         "@maven//:com_codahale_metrics_metrics_healthchecks",
 
-        "@maven//:com_fasterxml_jackson_core_jackson_core",
-        "@maven//:com_fasterxml_jackson_core_jackson_annotations",
-        "@maven//:com_fasterxml_jackson_core_jackson_databind",
         "@maven//:com_google_code_gson_gson",
 
         "@maven//:org_hibernate_validator_hibernate_validator",
@@ -44,7 +41,7 @@ java_test(
     ]),
     test_class = "com.example.myproject.ApplicationTest",
     deps = [
-        ":dropwizard-lib",
+        "@maven//:com_google_code_gson_gson",
         "@maven//:junit_junit",
     ],
 )
