@@ -26,6 +26,7 @@ java_library(
         "@maven//:com_codahale_metrics_metrics_healthchecks",
 
         "@maven//:com_google_code_gson_gson",
+        "@maven//:javax_annotation_javax_annotation_api",
 
         "@maven//:org_hibernate_validator_hibernate_validator",
         "@maven//:javax_validation_validation_api",

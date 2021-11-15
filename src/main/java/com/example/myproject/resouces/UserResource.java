@@ -9,7 +9,7 @@ import com.google.inject.Injector;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import java.util.logging.Logger;
+import java.util.List;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
@@ -17,19 +17,21 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 @Produces(APPLICATION_JSON)
 public class UserResource {
 
-    private static final Logger logger = Logger.getAnonymousLogger();
-
-    // TODO
-    // @Inject
-    // private UserService userService;
-
     @GET
     @Timed
     public User getUser() {
+        // TODO
         Injector injector = Guice.createInjector();
         UserService userService = injector.getInstance(UserService.class);
-
-        logger.info("userService: " + userService);
         return userService.getUser();
+    }
+
+    @GET
+    @Path("/list")
+    @Timed
+    public List<User> listUsers() {
+        Injector injector = Guice.createInjector();
+        UserService userService = injector.getInstance(UserService.class);
+        return userService.listUsers();
     }
 }

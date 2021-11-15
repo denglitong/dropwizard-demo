@@ -26,6 +26,7 @@ maven_install(
         "com.codahale.metrics:metrics-healthchecks:3.0.2",
 
         "com.google.code.gson:gson:2.8.9",
+        "javax.annotation:javax.annotation-api:1.3.2",
 
         "org.hibernate.validator:hibernate-validator:6.2.0.Final",
         "javax.validation:validation-api:2.0.1.Final",
